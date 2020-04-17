@@ -5,4 +5,4 @@
 jquery,
 slick - библиотеку для слайдеров на jquery,
 font-awesome,
-google-fonts
+google fonts
