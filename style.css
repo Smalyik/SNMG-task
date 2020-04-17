@@ -1,0 +1,144 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Fira Sans', sans-serif;
+}
+
+.promo-line {
+	display: flex;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	z-index: -1;
+	opacity: 0;
+	transition: opacity 1.5s;
+}
+
+.promo-line.active {
+	opacity: 1;
+	transition: opacity 3s ease-in-out;
+}
+
+.main {
+	overflow: hidden;
+}
+
+.social-line {
+	padding-top: 40px;
+	display: flex;
+	transition: transform 2s;
+	background-color: #fff;
+}
+
+.social-box {
+	padding: 30px;
+	display: flex !important;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: #fff;
+	margin-left: 20px;
+	margin-right: 20px;
+	height: 385px;
+}
+
+.social-box.active .social-box__text {
+	height: 326px;
+	width: 330px;
+	font-size: 1em;
+}
+
+.social-box__text-box {
+	background-color: #fff;
+	margin-top: auto;
+	padding: 20px;
+}
+
+.social-box__text-box.without-photo {
+	background-color: #177ee6;
+	color: #fff;
+}
+
+.social-box__text {
+	font-size: 0px;
+	height: 0px;
+	width: 0px;
+	opacity: 0;
+	transition: height 1.5s, width 1.5s;
+	font-weight: 300;
+}
+
+@media (max-width: 3840px) and (min-width: 1921px) {
+	body {
+		font-size: 32px;
+	}
+
+	.social-box {
+		height: 755px;
+		padding: 65px;
+		margin-right: 20px;
+		margin-left: 20px;
+	}
+
+	.social-box__text-box {
+		padding: 40px;
+	}
+
+	.social-box.active .social-box__text {
+		height: 635px;
+		width: 720px;
+	}
+}
+
+.footer {
+	background-color: #177ee6;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	padding: 35px 0;
+	position: fixed;
+	bottom: 0;
+	width: 100vw;
+}
+
+.footer__hashtag {
+	letter-spacing: 5px;
+	text-transform: uppercase;
+	font-size: 160px;
+	font-weight: 400;
+	color: #fff;
+}
+
+.footer__icons {
+	display: flex;
+}
+
+.footer__icon {
+	list-style: none;
+}
+
+.footer__icon + .footer__icon {
+	margin-left: 121px;
+}
+
+.footer__icon img {
+	width: 130px;
+	height: 130px;
+}
+
+@media (max-width: 1920px) {
+	.footer {
+		padding: 0;
+	}
+	.footer__hashtag {
+		font-size: 80px;
+	}
+	.footer__icon img {
+		width: 60px;
+		height: 60px;
+	}
+}
