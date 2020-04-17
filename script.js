@@ -103,6 +103,7 @@ const initSlider = () => {
 		slidesToScroll: 1,
 		arrows: false,
 		swipe : false,
+		initialSlide: 1,
 	}
 	$('.first-line').slick(sliderConfig);
 	$('.second-line').slick(sliderConfig);
@@ -115,7 +116,6 @@ const initSlider = () => {
 				hidePromoLine()
 			}, 8000);
 		} else if (!stopSlides) {
-			$('.first-line').slick('slickNext')
 			$('.first-line').slick('slickPrev')
 			slidesCounter += 1
 		}
